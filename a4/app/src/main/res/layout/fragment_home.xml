@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment">
+
+    <com.example.a4starter.CanvasView
+        android:id="@+id/home_canvas"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true" />
+
+<!--    <Button-->
+<!--        android:id="@+id/home_clear_button"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_below="@+id/home_canvas"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="@string/clear" />-->
+    <LinearLayout
+        android:id="@+id/home_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_canvas"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="600dp">
+
+        <Button
+            android:id="@+id/home_clear_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@string/clear" />
+
+        <Button
+            android:id="@+id/home_match_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@string/match" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/rec_gestureList"
+        android:layout_below="@+id/home_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</RelativeLayout>
